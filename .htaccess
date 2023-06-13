@@ -3,3 +3,8 @@ RewriteCond $1 !^(index\.php|resources|robots\.txt)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php/$1 [L,QSA]
+
+php_admin_value error_reporting 24575
+php_admin_value error_log /home/prabaharan/hr-payroll/application/logs/php_errors.log
+php_admin_flag  log_errors On
+php_admin_flag  display_errors Off
